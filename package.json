@@ -1,0 +1,21 @@
+{
+  "name": "extract-selection",
+  "main": "./lib/extract-selection",
+  "version": "0.1.0",
+  "description": "Extracts a selected value into a variable",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": [
+      "extract-selection:as-const",
+      "extract-selection:as-let"
+    ]
+  },
+  "repository": "https://github.com/dbazile/extract-selection",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

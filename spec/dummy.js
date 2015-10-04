@@ -1,0 +1,1 @@
+var alpha = 'lorem ipsum';
