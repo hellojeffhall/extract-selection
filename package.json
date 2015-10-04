@@ -1,10 +1,9 @@
 {
   "name": "extract-selection",
   "main": "./lib/extract-selection",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Extracts a selected value into a variable",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": [
       "extract-selection:as-const",
@@ -16,6 +15,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
