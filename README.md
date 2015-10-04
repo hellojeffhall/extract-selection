@@ -2,5 +2,5 @@
 
 Extracts the selection value into a variable.
 
-![demo](demo.gif)
+![demo](https://raw.githubusercontent.com/dbazile/extract-selection/master/demo.gif)
 
