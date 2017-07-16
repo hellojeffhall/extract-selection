@@ -9,7 +9,7 @@ An atom package that allows you to extract the selected text into a let or const
 ![demo](https://raw.githubusercontent.com/hellojeffhall/extract-selection/master/demo.gif)
 
 ## Installation
-Instal via [Atom](http://flight-manual.atom.io/using-atom/sections/atom-packages/) or `apm install extract-selection` on the command line.
+Install via [Atom](http://flight-manual.atom.io/using-atom/sections/atom-packages/) or `apm install extract-selection` on the command line.
 
 ## Original repo
 Thanks to David Bazile for the original repo, of which this is a fork.
