@@ -1,4 +1,7 @@
-Copyright (c) 2015 David Bazile
+Copyright for portions of this project are held by David Bazile, 2015.
+(Original repo here: https://github.com/dbazile/extract-selection)
+
+All other copyright for this project are held by Jeff Hall, 2017.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

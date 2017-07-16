@@ -10,7 +10,7 @@
       "extract-selection:as-let"
     ]
   },
-  "repository": "https://github.com/dbazile/extract-selection",
+  "repository": "https://github.com/hellojeffhall/extract-selection",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
