@@ -1,3 +1,5 @@
+path = require('path')
+
 describe "extract-selection", ->
   editor = null
   view = null
@@ -5,25 +7,28 @@ describe "extract-selection", ->
 
   beforeEach ->
     waitsForPromise ->
-      atom.workspace.open('dummy.js')
+      atom.workspace.open(path.join( __dirname , 'dummy.js'))
     runs ->
       view = atom.views.getView(atom.workspace)
       editor = atom.workspace.getActiveTextEditor()
       jasmine.attachToDOM(view)
       activationPromise = atom.packages.activatePackage('extract-selection')
-      activationPromise.fail -> (reason) -> throw reason
+      atom.config.set('extract-selection.lineEndChars', ' ;')
+      activationPromise.catch -> (reason) -> throw reason
 
   it "can extract via `const`", ->
     select /'lorem ipsum'/
     waitsForPromise -> activationPromise
+    lineEndChars = atom.config.get('extract-selection.lineEndChars')
     atom.commands.dispatch view, 'extract-selection:as-const'
-    runs -> assertExpectations("const loremipsum = 'lorem ipsum';\nvar alpha = loremipsum;\n", 'loremipsum')
+    runs -> assertExpectations("const loremipsum = 'lorem ipsum'#{lineEndChars}\nvar alpha = loremipsum;\n", 'loremipsum')
 
   it "can extract via `let`", ->
     select /'lorem ipsum'/
     waitsForPromise -> activationPromise
+    lineEndChars = atom.config.get('extract-selection.lineEndChars')
     atom.commands.dispatch view, 'extract-selection:as-let'
-    runs -> assertExpectations("let loremipsum = 'lorem ipsum';\nvar alpha = loremipsum;\n", 'loremipsum')
+    runs -> assertExpectations("let loremipsum = 'lorem ipsum'#{lineEndChars}\nvar alpha = loremipsum;\n", 'loremipsum')
 
   assertExpectations = (expectedText, expectedSymbol) ->
     expect(atom.packages.isPackageActive('extract-selection')).toBe(true)
